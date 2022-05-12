@@ -1,6 +1,6 @@
 # author @juanyepesp
-import sys
 
+import sys
 
 def makeAdjMatrix(perm: list):
     i = 0
@@ -30,18 +30,19 @@ def bfs(matrix):
             visited[vertex] = True
             group = [vertex]
             while (len(stack)>0):
-                actual = stack.pop(0) #sacar el primero del stack
-                for i in range(len(matrix)): #recorrer los vertices adyacentes
-                    if matrix[actual][i] > 0 and visited[i] == False: #si es adyacente y no se ha recorrido
-                        visited[i] = True #se marca como visitado
-                        stack.append(i) #se agrega al final del stack
-                        group.append(i) #se agrega al subconjunto
+                actual = stack.pop(0)
+                for i in range(len(matrix)):
+                    if matrix[actual][i] > 0 and not visited[i]: 
+                        visited[i] = True
+                        stack.append(i)
+                        group.append(i)
             answer.append(group)
         vertex +=1
-    return answer
+    return len(answer)
 
 numero_casos = int(sys.stdin.readline())
+
 for __ in range(numero_casos):
     case_list = list(map(int, sys.stdin.readline().split()))
     m = makeAdjMatrix(case_list)
-    print(len(bfs(m)))
+    print(bfs(m))

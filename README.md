@@ -8,7 +8,7 @@ Para compilar y ejecutar este programa seguir las siguientes instrucciones:
 
 1. Abrir una consola.
 
-2. Ir a la carpeta donde se encuentra el archivo ProblemaP1.py utilizando el comando cd:
+2. Ir a la carpeta donde se encuentra el archivo ProblemaP2.py utilizando el comando cd:
 
 `cd C:\Users\juan\...\proyecto-parte-2`
 
@@ -18,7 +18,7 @@ Para compilar y ejecutar este programa seguir las siguientes instrucciones:
 
 ### Anotaciones
 
-Los algoritmos implementados son dos. El primer algoritmo fue desarrollado utilizando una matriz de adyacencias para representar el grafo y luego haciendo breadth-first search sobre él para hallar las componentes conexos. Este algoritmo se encuentra en el archivo `bfs.py`. El segundo algoritmo y el más eficiente, se encuentra en `ProblemaP2.py`.
+Los algoritmos implementados son dos. El primer algoritmo fue desarrollado utilizando una matriz de adyacencias para representar el grafo y luego haciendo breadth-first search sobre él para hallar las componentes conexos. Este algoritmo se encuentra en el archivo `bfs.py` El segundo algoritmo y el más eficiente, se encuentra en `ProblemaP2.py`
 
 ## Integrantes
 - Juan Diego Yepes
