@@ -25,7 +25,7 @@ def bfs(matrix):
     vertex = 0
     a = 0 
     while vertex < len(visited):
-        if visited[vertex] == False:
+        if not visited[vertex]:
             queue.append(vertex)
             visited[vertex] = True
             while (len(queue)>0):
