@@ -21,24 +21,22 @@ def makeAdjMatrix(perm: list):
 
 def bfs(matrix):
     visited = [False]*(len(matrix))
-    stack = []
-    answer = []
+    queue = []
     vertex = 0
+    a = 0 
     while vertex < len(visited):
         if visited[vertex] == False:
-            stack.append(vertex)
+            queue.append(vertex)
             visited[vertex] = True
-            group = [vertex]
-            while (len(stack)>0):
-                actual = stack.pop(0)
+            while (len(queue)>0):
+                actual = queue.pop(0)
                 for i in range(len(matrix)):
                     if matrix[actual][i] > 0 and not visited[i]: 
                         visited[i] = True
-                        stack.append(i)
-                        group.append(i)
-            answer.append(group)
+                        queue.append(i)
+            a += 1
         vertex +=1
-    return len(answer)
+    return a
 
 numero_casos = int(sys.stdin.readline())
 
